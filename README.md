@@ -1,8 +1,8 @@
 # BQLAuthEngine
 完整版的三方分享工具，包括了QQ、微信、以及微博的登录分享功能
+
 有什么问题可以进群：612756901
 
-/*****************************************QQ 模块*****************************************/
 /**
  QQ登录
  
@@ -39,7 +39,6 @@
  */
 - (void)auth_qq_share_link:(BQLShareModel *)model scene:(QQShareScene )scene success:(BQLAuthSuccessBlock)success failure:(BQLAuthFailureBlock)failure;
 
-/*****************************************Wechat 模块*************************************/
 /**
  微信登录
  
@@ -98,7 +97,6 @@
  */
 - (void)auth_wechat_share_video:(BQLShareModel *)model scene:(WechatShareScene )scene success:(BQLAuthSuccessBlock)success failure:(BQLAuthFailureBlock)failure;
 
-/*****************************************Sina 模块***************************************/
 /**
  微博登录
  
