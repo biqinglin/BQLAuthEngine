@@ -6,8 +6,8 @@
 /**
  QQ登录
  
- 
  @param success 成功回调(用户信息)
+ 
  @param failure 失败回调
  */
  
