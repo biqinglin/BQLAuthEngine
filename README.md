@@ -24,7 +24,8 @@
  @param failure 失败回调
  
  */
-- (void)auth_qq_share_text:(BQLShareModel *)model success:(BQLAuthSuccessBlock)success failure:(BQLAuthFailureBlock)failure;
+ 
+ - (void)auth_qq_share_text:(BQLShareModel *)model success:(BQLAuthSuccessBlock)success failure:(BQLAuthFailureBlock)failure;
 
 /**
  QQ分享图片(仅支持分享至好友，可接收有效参数：model.title、model.describe)
