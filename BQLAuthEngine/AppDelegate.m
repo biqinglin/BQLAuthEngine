@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "BQLAuthEngine.h"
 
 @interface AppDelegate ()
 
@@ -14,6 +15,34 @@
 
 @implementation AppDelegate
 
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    
+    if ([url.scheme isEqualToString:[NSString stringWithFormat:@"%@",WECHAT_APPID]]) {
+        return  [WXApi handleOpenURL:url delegate:[BQLAuthEngine sharedAuthEngine]];
+    }
+    else if ([url.scheme isEqualToString:[NSString stringWithFormat:@"tencent%@",QQ_APPID]]) {
+        return  [TencentOAuth HandleOpenURL:url];
+    }
+    else if ([url.scheme isEqualToString:[NSString stringWithFormat:@"wb%@",SINA_APPKEY]]) {
+        return [WeiboSDK handleOpenURL:url delegate:[BQLAuthEngine sharedAuthEngine]];
+    }
+    return YES;
+    
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    
+    if ([url.scheme isEqualToString:[NSString stringWithFormat:@"%@",WECHAT_APPID]]) {
+        return  [WXApi handleOpenURL:url delegate:[BQLAuthEngine sharedAuthEngine]];
+    }
+    else if ([url.scheme isEqualToString:[NSString stringWithFormat:@"tencent%@",QQ_APPID]]) {
+        return  [TencentOAuth HandleOpenURL:url];
+    }
+    else if ([url.scheme isEqualToString:[NSString stringWithFormat:@"wb%@",SINA_APPKEY]]) {
+        return [WeiboSDK handleOpenURL:url delegate:[BQLAuthEngine sharedAuthEngine]];
+    }
+    return YES;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.

@@ -15,6 +15,25 @@
 		174826391E7782E600258A24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 174826371E7782E600258A24 /* LaunchScreen.storyboard */; };
 		174826441E7782E600258A24 /* BQLAuthEngineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 174826431E7782E600258A24 /* BQLAuthEngineTests.m */; };
 		1748264F1E7782E600258A24 /* BQLAuthEngineUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1748264E1E7782E600258A24 /* BQLAuthEngineUITests.m */; };
+		1748266A1E77837300258A24 /* BQLAuthEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 1748265E1E77837300258A24 /* BQLAuthEngine.m */; };
+		1748266B1E77837300258A24 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 174826611E77837300258A24 /* TencentOpenAPI.framework */; };
+		1748266C1E77837300258A24 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 174826621E77837300258A24 /* TencentOpenApi_IOS_Bundle.bundle */; };
+		1748266D1E77837300258A24 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 174826651E77837300258A24 /* libWeChatSDK.a */; };
+		1748266E1E77837300258A24 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 174826661E77837300258A24 /* README.txt */; };
+		174826711E7783C700258A24 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 174826701E7783C700258A24 /* libiconv.tbd */; };
+		174826731E7783CE00258A24 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 174826721E7783CE00258A24 /* SystemConfiguration.framework */; };
+		174826751E7783D500258A24 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 174826741E7783D500258A24 /* CoreGraphics.framework */; };
+		174826771E7783DC00258A24 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 174826761E7783DC00258A24 /* libsqlite3.tbd */; };
+		174826791E7783E400258A24 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 174826781E7783E400258A24 /* CoreTelephony.framework */; };
+		1748267B1E7783ED00258A24 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1748267A1E7783ED00258A24 /* libstdc++.tbd */; };
+		1748267D1E7783F400258A24 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1748267C1E7783F400258A24 /* libz.tbd */; };
+		174826801E778D1600258A24 /* BQLShareModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1748267F1E778D1600258A24 /* BQLShareModel.m */; };
+		174826871E779BD800258A24 /* qqf.png in Resources */ = {isa = PBXBuildFile; fileRef = 174826821E779BD800258A24 /* qqf.png */; };
+		174826881E779BD800258A24 /* qqz.png in Resources */ = {isa = PBXBuildFile; fileRef = 174826831E779BD800258A24 /* qqz.png */; };
+		174826891E779BD800258A24 /* wechatf.png in Resources */ = {isa = PBXBuildFile; fileRef = 174826841E779BD800258A24 /* wechatf.png */; };
+		1748268A1E779BD800258A24 /* wechatt.png in Resources */ = {isa = PBXBuildFile; fileRef = 174826851E779BD800258A24 /* wechatt.png */; };
+		1748268B1E779BD800258A24 /* weibo.png in Resources */ = {isa = PBXBuildFile; fileRef = 174826861E779BD800258A24 /* weibo.png */; };
+		AE4596246DA65F269D90FDDA /* libPods-BQLAuthEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD2BD67FE73CE4ECD9DAC2FC /* libPods-BQLAuthEngine.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +70,32 @@
 		1748264A1E7782E600258A24 /* BQLAuthEngineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BQLAuthEngineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1748264E1E7782E600258A24 /* BQLAuthEngineUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BQLAuthEngineUITests.m; sourceTree = "<group>"; };
 		174826501E7782E600258A24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1748265D1E77837300258A24 /* BQLAuthEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQLAuthEngine.h; sourceTree = "<group>"; };
+		1748265E1E77837300258A24 /* BQLAuthEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQLAuthEngine.m; sourceTree = "<group>"; };
+		174826611E77837300258A24 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
+		174826621E77837300258A24 /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
+		174826651E77837300258A24 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		174826661E77837300258A24 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		174826671E77837300258A24 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
+		174826681E77837300258A24 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		174826691E77837300258A24 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		174826701E7783C700258A24 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		174826721E7783CE00258A24 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		174826741E7783D500258A24 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		174826761E7783DC00258A24 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		174826781E7783E400258A24 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		1748267A1E7783ED00258A24 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		1748267C1E7783F400258A24 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		1748267E1E778D1600258A24 /* BQLShareModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQLShareModel.h; sourceTree = "<group>"; };
+		1748267F1E778D1600258A24 /* BQLShareModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQLShareModel.m; sourceTree = "<group>"; };
+		174826821E779BD800258A24 /* qqf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qqf.png; sourceTree = "<group>"; };
+		174826831E779BD800258A24 /* qqz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qqz.png; sourceTree = "<group>"; };
+		174826841E779BD800258A24 /* wechatf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wechatf.png; sourceTree = "<group>"; };
+		174826851E779BD800258A24 /* wechatt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wechatt.png; sourceTree = "<group>"; };
+		174826861E779BD800258A24 /* weibo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weibo.png; sourceTree = "<group>"; };
+		740708D7FCAF38902DF27476 /* Pods-BQLAuthEngine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BQLAuthEngine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BQLAuthEngine/Pods-BQLAuthEngine.debug.xcconfig"; sourceTree = "<group>"; };
+		AD2BD67FE73CE4ECD9DAC2FC /* libPods-BQLAuthEngine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BQLAuthEngine.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E134855225127C9E385696BA /* Pods-BQLAuthEngine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BQLAuthEngine.release.xcconfig"; path = "Pods/Target Support Files/Pods-BQLAuthEngine/Pods-BQLAuthEngine.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +103,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1748267D1E7783F400258A24 /* libz.tbd in Frameworks */,
+				1748267B1E7783ED00258A24 /* libstdc++.tbd in Frameworks */,
+				174826791E7783E400258A24 /* CoreTelephony.framework in Frameworks */,
+				174826771E7783DC00258A24 /* libsqlite3.tbd in Frameworks */,
+				174826751E7783D500258A24 /* CoreGraphics.framework in Frameworks */,
+				174826731E7783CE00258A24 /* SystemConfiguration.framework in Frameworks */,
+				174826711E7783C700258A24 /* libiconv.tbd in Frameworks */,
+				1748266D1E77837300258A24 /* libWeChatSDK.a in Frameworks */,
+				1748266B1E77837300258A24 /* TencentOpenAPI.framework in Frameworks */,
+				AE4596246DA65F269D90FDDA /* libPods-BQLAuthEngine.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +140,8 @@
 				174826421E7782E600258A24 /* BQLAuthEngineTests */,
 				1748264D1E7782E600258A24 /* BQLAuthEngineUITests */,
 				174826271E7782E600258A24 /* Products */,
+				1748266F1E7783C700258A24 /* Frameworks */,
+				B4864C5AF7D0EE3F591ED736 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +158,7 @@
 		174826281E7782E600258A24 /* BQLAuthEngine */ = {
 			isa = PBXGroup;
 			children = (
+				1748265C1E77837300258A24 /* BQLAuthEngine */,
 				1748262C1E7782E600258A24 /* AppDelegate.h */,
 				1748262D1E7782E600258A24 /* AppDelegate.m */,
 				1748262F1E7782E600258A24 /* ViewController.h */,
@@ -140,6 +198,93 @@
 			path = BQLAuthEngineUITests;
 			sourceTree = "<group>";
 		};
+		1748265C1E77837300258A24 /* BQLAuthEngine */ = {
+			isa = PBXGroup;
+			children = (
+				1748267E1E778D1600258A24 /* BQLShareModel.h */,
+				1748267F1E778D1600258A24 /* BQLShareModel.m */,
+				1748265D1E77837300258A24 /* BQLAuthEngine.h */,
+				1748265E1E77837300258A24 /* BQLAuthEngine.m */,
+				174826811E779BD800258A24 /* images */,
+				1748265F1E77837300258A24 /* SDK */,
+			);
+			path = BQLAuthEngine;
+			sourceTree = "<group>";
+		};
+		1748265F1E77837300258A24 /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				174826601E77837300258A24 /* QQ */,
+				174826631E77837300258A24 /* Sina */,
+				174826641E77837300258A24 /* Wechat */,
+			);
+			path = SDK;
+			sourceTree = "<group>";
+		};
+		174826601E77837300258A24 /* QQ */ = {
+			isa = PBXGroup;
+			children = (
+				174826611E77837300258A24 /* TencentOpenAPI.framework */,
+				174826621E77837300258A24 /* TencentOpenApi_IOS_Bundle.bundle */,
+			);
+			path = QQ;
+			sourceTree = "<group>";
+		};
+		174826631E77837300258A24 /* Sina */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sina;
+			sourceTree = "<group>";
+		};
+		174826641E77837300258A24 /* Wechat */ = {
+			isa = PBXGroup;
+			children = (
+				174826651E77837300258A24 /* libWeChatSDK.a */,
+				174826661E77837300258A24 /* README.txt */,
+				174826671E77837300258A24 /* WechatAuthSDK.h */,
+				174826681E77837300258A24 /* WXApi.h */,
+				174826691E77837300258A24 /* WXApiObject.h */,
+			);
+			path = Wechat;
+			sourceTree = "<group>";
+		};
+		1748266F1E7783C700258A24 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1748267C1E7783F400258A24 /* libz.tbd */,
+				1748267A1E7783ED00258A24 /* libstdc++.tbd */,
+				174826781E7783E400258A24 /* CoreTelephony.framework */,
+				174826761E7783DC00258A24 /* libsqlite3.tbd */,
+				174826741E7783D500258A24 /* CoreGraphics.framework */,
+				174826721E7783CE00258A24 /* SystemConfiguration.framework */,
+				174826701E7783C700258A24 /* libiconv.tbd */,
+				AD2BD67FE73CE4ECD9DAC2FC /* libPods-BQLAuthEngine.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		174826811E779BD800258A24 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				174826821E779BD800258A24 /* qqf.png */,
+				174826831E779BD800258A24 /* qqz.png */,
+				174826841E779BD800258A24 /* wechatf.png */,
+				174826851E779BD800258A24 /* wechatt.png */,
+				174826861E779BD800258A24 /* weibo.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		B4864C5AF7D0EE3F591ED736 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				740708D7FCAF38902DF27476 /* Pods-BQLAuthEngine.debug.xcconfig */,
+				E134855225127C9E385696BA /* Pods-BQLAuthEngine.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +292,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 174826531E7782E600258A24 /* Build configuration list for PBXNativeTarget "BQLAuthEngine" */;
 			buildPhases = (
+				9F44A1C2CEF6B91B4C1B42F7 /* [CP] Check Pods Manifest.lock */,
 				174826221E7782E600258A24 /* Sources */,
 				174826231E7782E600258A24 /* Frameworks */,
 				174826241E7782E600258A24 /* Resources */,
+				97F6097BF23D3F953331D35E /* [CP] Embed Pods Frameworks */,
+				7DC1DA48E77AA993AF0D49A1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -249,9 +397,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1748268B1E779BD800258A24 /* weibo.png in Resources */,
+				174826891E779BD800258A24 /* wechatf.png in Resources */,
+				1748268A1E779BD800258A24 /* wechatt.png in Resources */,
+				174826871E779BD800258A24 /* qqf.png in Resources */,
+				1748266C1E77837300258A24 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				174826391E7782E600258A24 /* LaunchScreen.storyboard in Resources */,
+				174826881E779BD800258A24 /* qqz.png in Resources */,
 				174826361E7782E600258A24 /* Assets.xcassets in Resources */,
 				174826341E7782E600258A24 /* Main.storyboard in Resources */,
+				1748266E1E77837300258A24 /* README.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,14 +426,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7DC1DA48E77AA993AF0D49A1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BQLAuthEngine/Pods-BQLAuthEngine-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97F6097BF23D3F953331D35E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BQLAuthEngine/Pods-BQLAuthEngine-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F44A1C2CEF6B91B4C1B42F7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		174826221E7782E600258A24 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				174826311E7782E600258A24 /* ViewController.m in Sources */,
+				1748266A1E77837300258A24 /* BQLAuthEngine.m in Sources */,
 				1748262E1E7782E600258A24 /* AppDelegate.m in Sources */,
 				1748262B1E7782E600258A24 /* main.m in Sources */,
+				174826801E778D1600258A24 /* BQLShareModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,11 +628,21 @@
 		};
 		174826541E7782E600258A24 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 740708D7FCAF38902DF27476 /* Pods-BQLAuthEngine.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UCG3JW5WXD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BQLAuthEngine/BQLAuthEngine/SDK/QQ",
+				);
 				INFOPLIST_FILE = BQLAuthEngine/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BQLAuthEngine/BQLAuthEngine/SDK/Wechat",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = llfinance.BQLAuthEngine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -435,11 +650,21 @@
 		};
 		174826551E7782E600258A24 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E134855225127C9E385696BA /* Pods-BQLAuthEngine.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UCG3JW5WXD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BQLAuthEngine/BQLAuthEngine/SDK/QQ",
+				);
 				INFOPLIST_FILE = BQLAuthEngine/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/BQLAuthEngine/BQLAuthEngine/SDK/Wechat",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = llfinance.BQLAuthEngine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -514,6 +739,7 @@
 				174826551E7782E600258A24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		174826561E7782E600258A24 /* Build configuration list for PBXNativeTarget "BQLAuthEngineTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +748,7 @@
 				174826581E7782E600258A24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		174826591E7782E600258A24 /* Build configuration list for PBXNativeTarget "BQLAuthEngineUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +757,7 @@
 				1748265B1E7782E600258A24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
