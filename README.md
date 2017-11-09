@@ -2,6 +2,7 @@
 完整版的三方分享工具，包括了QQ、微信、以及微博的登录分享功能
 
 有什么问题可以进群：612756901
+```
 
 /**
  QQ登录
@@ -13,6 +14,7 @@
  */
  
 - (void)auth_qq_login:(BQLAuthSuccessBlock)success failure:(BQLAuthFailureBlock)failure;
+```
 
 /**
  QQ分享文本(仅支持分享至好友)
