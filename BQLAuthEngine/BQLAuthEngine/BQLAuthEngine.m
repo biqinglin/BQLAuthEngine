@@ -8,8 +8,6 @@
 
 #import "BQLAuthEngine.h"
 
-static BQLAuthEngine *single;
-
 @interface BQLAuthEngine () <WBHttpRequestDelegate>
 
 @property (nonatomic, strong) TencentOAuth *tencentOAuth;
@@ -21,22 +19,10 @@ static BQLAuthEngine *single;
 @implementation BQLAuthEngine
 
 
-+ (instancetype)sharedAuthEngine {
++ (void)initialize {
     
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        
-        single = [[self.class alloc] init];
-        if(!single.tencentOAuth) {
-            single.tencentOAuth = [[TencentOAuth alloc] initWithAppId:QQ_APPID andDelegate:single];
-            [single registerApp];
-        }
-    });
-    return single;
-}
-
-- (void)registerApp {
-    
+    BQLAuthEngine *engine = [BQLAuthEngine sharedAuthEngine];
+    engine.tencentOAuth = [[TencentOAuth alloc] initWithAppId:QQ_APPID andDelegate:engine];
     // 微信注册授权
     [WXApi registerApp:WECHAT_APPID];
     // 微博注册授权(开启调试模式，可查看打印日志)
@@ -46,6 +32,16 @@ static BQLAuthEngine *single;
     [WeiboSDK enableDebugMode:NO];
 #endif
     [WeiboSDK registerApp:SINA_APPKEY];
+}
+
++ (instancetype)sharedAuthEngine {
+    static BQLAuthEngine *s = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        
+        s = [BQLAuthEngine new];
+    });
+    return s;
 }
 
 + (BOOL)isWXAppInstalled {
@@ -131,7 +127,6 @@ static BQLAuthEngine *single;
         QQApiTextObject *textObject = [QQApiTextObject objectWithText:model.text];
         SendMessageToQQReq *req = [SendMessageToQQReq reqWithContent:textObject];
         [QQApiInterface sendReq:req];
-        //[self handleSendResult:[QQApiInterface sendReq:req]];
     }
     else {
         NSString *error = [NSString stringWithFormat:@"%@：分享文本缺失,请填写model.text",stringWithAuthErrorCode(AuthErrorCodeParameterEmpty)];
@@ -148,7 +143,6 @@ static BQLAuthEngine *single;
         QQApiImageObject *imageObject = [QQApiImageObject objectWithData:UIImagePNGRepresentation(model.image) previewImageData:UIImagePNGRepresentation(model.previewImage) title:model.title description:model.describe];
         SendMessageToQQReq *req = [SendMessageToQQReq reqWithContent:imageObject];
         [QQApiInterface sendReq:req];
-        //[self handleSendResult:[QQApiInterface sendReq:req]];
     }
     else {
         NSString *error = [NSString stringWithFormat:@"%@：分享图片缺失,请填写model.image",stringWithAuthErrorCode(AuthErrorCodeParameterEmpty)];
@@ -186,7 +180,6 @@ static BQLAuthEngine *single;
                 break;
         }
         [QQApiInterface sendReq:req];
-        //[self handleSendResult:sent];
     }
     else {
         NSString *error = [NSString stringWithFormat:@"%@：分享链接地址缺失,请填写model.urlString",stringWithAuthErrorCode(AuthErrorCodeParameterEmpty)];
@@ -194,8 +187,8 @@ static BQLAuthEngine *single;
     }
 }
 
-//- (void)handleSendResult:(QQApiSendResultCode )code {
-//}
+- (void)handleSendResult:(QQApiSendResultCode )code {
+}
 
 #pragma mark - tencentDelegate
 - (void)tencentDidLogin {
