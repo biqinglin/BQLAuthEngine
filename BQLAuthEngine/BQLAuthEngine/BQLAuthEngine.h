@@ -162,7 +162,7 @@ typedef NS_ENUM(NSUInteger, WechatShareScene) {
 typedef void(^BQLAuthSuccessBlock)(id response);
 typedef void(^BQLAuthFailureBlock)(NSString *error);
 
-@interface BQLAuthEngine : NSObject <TencentSessionDelegate,WXApiDelegate,WeiboSDKDelegate>
+@interface BQLAuthEngine : NSObject <TencentSessionDelegate,WXApiDelegate,QQApiInterfaceDelegate,WeiboSDKDelegate>
 
 @property (nonatomic, readonly, copy) NSString *qq_open_id;
 @property (nonatomic, readonly, copy) NSString *qq_token;

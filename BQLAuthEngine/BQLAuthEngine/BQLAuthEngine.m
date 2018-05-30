@@ -130,7 +130,8 @@ static BQLAuthEngine *single;
     if(NotNilAndNull(model.text)) {
         QQApiTextObject *textObject = [QQApiTextObject objectWithText:model.text];
         SendMessageToQQReq *req = [SendMessageToQQReq reqWithContent:textObject];
-        [self handleSendResult:[QQApiInterface sendReq:req]];
+        [QQApiInterface sendReq:req];
+        //[self handleSendResult:[QQApiInterface sendReq:req]];
     }
     else {
         NSString *error = [NSString stringWithFormat:@"%@：分享文本缺失,请填写model.text",stringWithAuthErrorCode(AuthErrorCodeParameterEmpty)];
@@ -146,7 +147,8 @@ static BQLAuthEngine *single;
         
         QQApiImageObject *imageObject = [QQApiImageObject objectWithData:UIImagePNGRepresentation(model.image) previewImageData:UIImagePNGRepresentation(model.previewImage) title:model.title description:model.describe];
         SendMessageToQQReq *req = [SendMessageToQQReq reqWithContent:imageObject];
-        [self handleSendResult:[QQApiInterface sendReq:req]];
+        [QQApiInterface sendReq:req];
+        //[self handleSendResult:[QQApiInterface sendReq:req]];
     }
     else {
         NSString *error = [NSString stringWithFormat:@"%@：分享图片缺失,请填写model.image",stringWithAuthErrorCode(AuthErrorCodeParameterEmpty)];
@@ -183,7 +185,8 @@ static BQLAuthEngine *single;
             default:
                 break;
         }
-        [self handleSendResult:sent];
+        [QQApiInterface sendReq:req];
+        //[self handleSendResult:sent];
     }
     else {
         NSString *error = [NSString stringWithFormat:@"%@：分享链接地址缺失,请填写model.urlString",stringWithAuthErrorCode(AuthErrorCodeParameterEmpty)];
@@ -191,16 +194,8 @@ static BQLAuthEngine *single;
     }
 }
 
-- (void)handleSendResult:(QQApiSendResultCode )code {
-    
-    if(code == EQQAPISENDSUCESS) {
-        self.successBlock?self.successBlock(@(code)):nil;
-    }
-    else {
-        // 这个错误详细信息请查看QQApiSendResultCode枚举,这里我统一返回"通用错误"枚举值
-        self.failureBlock?self.failureBlock(stringWithAuthErrorCode(AuthErrorCodeCommon)):nil;
-    }
-}
+//- (void)handleSendResult:(QQApiSendResultCode )code {
+//}
 
 #pragma mark - tencentDelegate
 - (void)tencentDidLogin {
@@ -369,14 +364,20 @@ static BQLAuthEngine *single;
         // 授权登陆回应
         [self completeAuth:(SendAuthResp*)resp];
     }
-    else if ([resp isKindOfClass:[SendMessageToWXResp class]]) {
+    else if ([resp isKindOfClass:[SendMessageToWXResp class]] || [resp isKindOfClass:[SendMessageToQQResp class]]) {
         // 分享回应
-        [self completeShare:(SendMessageToWXResp *)resp];
+        [self completeShare:resp];
     }
     else {
         // 当做失败处理
         self.failureBlock?self.failureBlock(stringWithAuthErrorCode(AuthErrorCodeCommon)):nil;
     }
+}
+
+- (void)isOnlineResponse:(NSDictionary *)response {
+}
+
+- (void)onReq:(QQBaseReq *)req {
 }
 
 // 授权登陆操作：获取code、access_token、openid、userinfo
@@ -439,13 +440,27 @@ static BQLAuthEngine *single;
 // 完成分享操作(分享成功、分享失败)
 - (void)completeShare:(SendMessageToWXResp *)resp {
     
-    if (resp.errCode == 0) {
-        self.successBlock(@(resp.errCode));
+    if ([resp isKindOfClass:[SendMessageToWXResp class]]) {
+        SendMessageToWXResp *result = (SendMessageToWXResp *)resp;
+        if (result.errCode == 0) {
+            self.successBlock?self.successBlock(@(resp.errCode)):nil;
+        }
+        else {
+            self.failureBlock?self.failureBlock(stringWithAuthErrorCode(AuthErrorCodeCommon)):nil;
+        }
+        return;
     }
-    else {
-        // 这个错误详细信息请查看WXErrCode枚举,这里我统一返回"通用错误"枚举值
-        self.failureBlock?self.failureBlock(stringWithAuthErrorCode(AuthErrorCodeCommon)):nil;
+    else if ([resp isKindOfClass:[SendMessageToQQResp class]]) {
+        SendMessageToQQResp *result = (SendMessageToQQResp *)resp;
+        if ([result.result isEqualToString:@"0"]) {
+            self.successBlock?self.successBlock(result.result):nil;
+        }
+        else {
+            self.failureBlock?self.failureBlock(stringWithAuthErrorCode(AuthErrorCodeCommon)):nil;
+        }
+        return;
     }
+    self.failureBlock?self.failureBlock(stringWithAuthErrorCode(AuthErrorCodeCommon)):nil;
 }
 
 #pragma weibo delegate
