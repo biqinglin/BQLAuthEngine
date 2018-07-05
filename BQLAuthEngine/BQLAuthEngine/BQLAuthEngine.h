@@ -45,7 +45,7 @@
         <string>wechat</string>
 	</array>
  
- *  下载QQ、微信官方SDK导入你的工程。
+ *  下载QQ、微信官方SDK导入你的工程，建议微信也用pod管理，微信区分了有支付和无支付版本的SDK
     通过pod添加微博SDK：pod "WeiboSDK", :git => "https://github.com/sinaweibosdk/weibo_ios_sdk.git"
  
  *  添加依赖库：
@@ -110,8 +110,8 @@
 static NSString *const QQ_APPID = @"";
 static NSString *const QQ_APPKEY = @"";
 
-static NSString *const WECHAT_APPID = @"";
-static NSString *const WECHAT_APPSECRET = @"";
+static NSString *const WECHAT_APPID = @"wx17e0268595a70fec";
+static NSString *const WECHAT_APPSECRET = @"c6bc948879b51cbc47867236887ba01e";
 
 static NSString *const SINA_APPKEY = @"";
 static NSString *const SINA_APPSECRET = @"";

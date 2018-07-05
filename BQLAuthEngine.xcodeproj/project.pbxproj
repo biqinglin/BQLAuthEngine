@@ -355,8 +355,8 @@
 				TargetAttributes = {
 					174826251E7782E600258A24 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = UCG3JW5WXD;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = 6CLPJRDWPC;
+						ProvisioningStyle = Manual;
 					};
 					1748263E1E7782E600258A24 = {
 						CreatedOnToolsVersion = 8.1;
@@ -631,7 +631,8 @@
 			baseConfigurationReference = 740708D7FCAF38902DF27476 /* Pods-BQLAuthEngine.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = UCG3JW5WXD;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 6CLPJRDWPC;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BQLAuthEngine/BQLAuthEngine/SDK/QQ",
@@ -643,8 +644,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/BQLAuthEngine/BQLAuthEngine/SDK/Wechat",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = llfinance.BQLAuthEngine;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fy.test.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b16e7da0-be75-4f2d-844d-ffa4979be117";
+				PROVISIONING_PROFILE_SPECIFIER = fu.test;
 			};
 			name = Debug;
 		};
@@ -653,7 +656,8 @@
 			baseConfigurationReference = E134855225127C9E385696BA /* Pods-BQLAuthEngine.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = UCG3JW5WXD;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BQLAuthEngine/BQLAuthEngine/SDK/QQ",
@@ -665,8 +669,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/BQLAuthEngine/BQLAuthEngine/SDK/Wechat",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = llfinance.BQLAuthEngine;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fy.test.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
